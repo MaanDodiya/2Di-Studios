@@ -1,3 +1,8 @@
 {
-	"name": "testing"
+	"Renaissance": {
+		"frontCover": "./images/renaissance/frontCover.png",
+		"backCover": "./images/renaissance/backCover.png",
+		"date":"2-1-21",
+		"price":"$6.69",
+	}
 }
