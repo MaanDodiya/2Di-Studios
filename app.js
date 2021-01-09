@@ -2,8 +2,13 @@ var URL = 'https://raw.githubusercontent.com/MaanDodiya/2di-studios/main/data.js
 	
 async function getJSONData (url) {
 	const response = await fetch(url);
-	var data = await response.json();
-	console.log(data);
+	const data = await response.json();
+	return data
+	// console.log(data);
 }
 
-getJSONData(URL);
+async function show() {
+	const data = await getJSONData(URL)
+	console.log(data)
+}
+ show()
