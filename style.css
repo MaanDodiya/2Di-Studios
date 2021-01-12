@@ -1,5 +1,86 @@
+/* FONTS */
+
+@font-face {
+  font-family: BasisGrotesquePro-Black;
+  src: url(./fonts/BasisGrotesquePro-Black.ttf);
+}
+
+@font-face {
+  font-family: BasisGrotesquePro-BlackItalic;
+  src: url(./fonts/BasisGrotesquePro-BlackItalic.ttf);
+}
+
+@font-face {
+  font-family: BasisGrotesquePro-Bold;
+  src: url(./fonts/BasisGrotesquePro-Bold.ttf);
+}
+
+@font-face {
+  font-family: BasisGrotesquePro-BoldItalic;
+  src: url(./fonts/BasisGrotesquePro-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: BasisGrotesquePro-Italic;
+  src: url(./fonts/BasisGrotesquePro-Italic.ttf);
+}
+
+@font-face {
+  font-family: BasisGrotesquePro-Light;
+  src: url(./fonts/BasisGrotesquePro-Light.ttf);
+}
+
+@font-face {
+  font-family: BasisGrotesquePro-LightItalic;
+  src: url(./fonts/BasisGrotesquePro-LightItalic.ttf);
+}
+
+@font-face {
+  font-family: BasisGrotesquePro-Medium;
+  src: url(./fonts/BasisGrotesquePro-Medium.ttf);
+}
+
+@font-face {
+  font-family: BasisGrotesquePro-MediumItalic;
+  src: url(./fonts/BasisGrotesquePro-MediumItalic.ttf);
+}
+
+@font-face {
+  font-family: BasisGrotesquePro-Regular;
+  src: url(./fonts/BasisGrotesquePro-Regular.ttf);
+}
+
+
+
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+.navbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	background-color: gold;
+}
+
+.container {
+	width: 80%;
+	max-width: 1000px;
+	margin: auto;
+	height: 120vh;
+	background-color: red;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 150px;
+	background-color: blue;
 }
