@@ -22,7 +22,7 @@ function purchase() {
 
 function changeCover(album) {
 	var image = document.querySelector("section#"+album+" img");
-	var button = document.querySelector("section#"+album+" .info #buttons #view")
+	var button = document.querySelector("section#"+album+" .info .buttons .view")
 	if(image.className=="front") {
 		image.className="back";
 		image.src = "./images/"+album+"/backCover.png"

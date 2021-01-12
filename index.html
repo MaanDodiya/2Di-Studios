@@ -3,19 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" href="images/Phify-Favicon.png" sizes="512x512"> -->
     <link rel="stylesheet" href="style.css" />
     <script src="app.js" async></script>
     <title>2Di Studios</title>
   </head>
   <body>
-    <div class="navbar">This is navbar</div>
+    <header class="navbar">
+      <div class="github">
+				<a href="https://github.com/MaanDodiya/" target="_blank">
+					<img src="images/github-logo.png" class="github-logo"></img>
+					Maan Dodiya
+				</a>
+			</div>
+    </header>
     <div class="container">
       <section id="renaissance">
         <img class="front" src="./images/renaissance/frontCover.png" alt="" />
         <div class="info">
-          <div id="heading">Renaissance</div>
-          <div id="released">Released 2/1/21</div>
-          <div id="extrainfo">
+          <div class="heading">Renaissance</div>
+          <div class="released">Released 2/1/21</div>
+          <div class="extrainfo">
             <span>Artist:</span> Maan Dodiya<br />
             <span>Tracks:</span> 9<br />
             <span>Length:</span> 75:26
@@ -26,14 +34,14 @@
             eos sit, quisquam quos eius dicta, reprehenderit ullam accusamus.
             Beatae, repellendus minima?
           </p>
-          <div id="buttons">
-            <button id="purchase" onclick="purchase()">
+          <div class="buttons">
+            <button class="purchase" onclick="purchase()">
               Purchase for $6.69
             </button>
             <button
-              id="view"
-              class="renaissance"
-              onclick="changeCover(this.className)"
+              id="renaissance"
+              class="view"
+              onclick="changeCover(this.id)"
             >
               View Back Cover
             </button>
@@ -41,6 +49,9 @@
         </div>
       </section>
     </div>
-    <footer>This is footer</footer>
+    <footer>
+      <div class="line-1">Made with <img src="images/heart.png" class="heart"></div>
+      <div class="line-2">2Di Productions, 2021</div>
+    </footer>
   </body>
 </html>

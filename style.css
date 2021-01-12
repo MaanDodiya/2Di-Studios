@@ -79,8 +79,30 @@ body {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 50px;
+	height: 70px;
 	background-color: var(--bg-dark-grey);
+}
+
+.github {
+  position: absolute;
+  top: 15px;
+  right: 2%;
+  display: flex;
+  align-items: center;
+}
+
+.github a {
+	font-size: 16px;
+	display: flex;
+  padding: 0.7vw;
+  text-decoration: none;
+  color: var(--text-grey);
+}
+
+.github-logo {
+  height: 18px;
+  width: 18px;
+  margin-right: 5px;
 }
 
 .container {
@@ -95,6 +117,7 @@ section {
 	position: relative;
 	display: flex;
 	justify-content: space-around;
+	padding: 40px 0;
 }
 
 section img{
@@ -107,28 +130,28 @@ section .info {
 	color: var(--text-grey);
 }
 
-section .info #heading{
+section .info .heading{
 	font-family: "BasisGrotesquePro-Medium", serif;
 	font-size: 2.5em;
 	color: var(--heading-yellow);
 	margin-bottom: -5px;
 }
 
-section .info #released {
+section .info .released {
 	color: var(--text-dark-grey);
 	margin: 0 0 20px 2px;
 	font-size: 0.8em;
 }
 
-#extrainfo {
+.extrainfo {
 	margin-bottom: 20px;
 }
 
-#extrainfo span {
+.extrainfo span {
 	color: var(--text-dark-grey);
 }
 
-section div#buttons {
+section div.buttons {
 	margin: 50px;
 	display: flex;
 	flex-direction: column;
@@ -149,7 +172,7 @@ section button:active {
 	text-decoration: none;
 }
 
-section button#purchase {
+section button.purchase {
 	width: 100%;
 	font-size: 16px;
 	font-family: "BasisGrotesquePro-Bold", serif;
@@ -158,24 +181,48 @@ section button#purchase {
 	background-color: var(--dull-yellow);
 }
 
-section button#view {
+section button.view {
 	margin-top: 8px;
 	font-family: "BasisGrotesquePro-Medium", serif;
 	font-size: 13px;
 	color: var(--dull-yellow);
 }
 
-section div#label {
-	position: absolute;
-	top: 90%;
-	left: 25%;
-}
+/* ############# */
 
 footer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 150px;
-	background-color: blue;
+	height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	text-align: center;	
+	background-color: var(--bg-dark-grey);
+}
+
+footer .heart {
+  text-align: center;
+  margin: 0 5px;
+  height: 13px;
+  width: 13px;
+  animation: pound 0.35s infinite alternate;
+}
+
+footer .line-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: var(--text-dark-grey);
+}
+
+footer .line-2 {
+	font-size: 16px;
+	font-family: "BasisGrotesquePro-Medium", serif;
+  color: var(--white);
+}
+
+@keyframes pound {
+  to {
+    transform: scale(1.2);
+  }
 }
