@@ -50,13 +50,28 @@
   src: url(./fonts/BasisGrotesquePro-Regular.ttf);
 }
 
+/* VARIABLES */
 
-
+:root {
+	--bg-dark-grey: #111111;
+	--bg-grey: #141414;
+	--bg-light-grey: #1a1a1a;
+	--text-dark-grey: #666666;
+	--text-grey: #b3b3b3;
+	--white: #e5e5e5;
+	--heading-yellow: #ffdd17;	
+	--dull-yellow: #ccad15;	
+}
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "BasisGrotesquePro-Regular", serif;
+}
+
+body {
+	background-color: var(--bg-light-grey);
 }
 
 .navbar {
@@ -65,15 +80,95 @@
 	align-items: center;
 	width: 100%;
 	height: 50px;
-	background-color: gold;
+	background-color: var(--bg-dark-grey);
 }
 
 .container {
 	width: 80%;
-	max-width: 1000px;
+	max-width: 900px;
 	margin: auto;
-	height: 120vh;
-	background-color: red;
+	min-height: 100vh;
+	background-color: var(--bg-grey);
+}
+
+section {
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+}
+
+section img{
+	width: 60%;
+	height: 60%;
+}
+
+section .info {
+	padding: 10px 30px;
+	color: var(--text-grey);
+}
+
+section .info #heading{
+	font-family: "BasisGrotesquePro-Medium", serif;
+	font-size: 2.5em;
+	color: var(--heading-yellow);
+	margin-bottom: -5px;
+}
+
+section .info #released {
+	color: var(--text-dark-grey);
+	margin: 0 0 20px 2px;
+	font-size: 0.8em;
+}
+
+#extrainfo {
+	margin-bottom: 20px;
+}
+
+#extrainfo span {
+	color: var(--text-dark-grey);
+}
+
+section div#buttons {
+	margin: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+section button {
+background-color: transparent;
+border: none;
+cursor: pointer;
+overflow: hidden;
+text-decoration: none;
+outline:none;
+}
+
+section button:active {
+	text-decoration: none;
+}
+
+section button#purchase {
+	width: 100%;
+	font-size: 16px;
+	font-family: "BasisGrotesquePro-Bold", serif;
+	padding: 8px;
+	border-radius: 2px;
+	background-color: var(--dull-yellow);
+}
+
+section button#view {
+	margin-top: 8px;
+	font-family: "BasisGrotesquePro-Medium", serif;
+	font-size: 13px;
+	color: var(--dull-yellow);
+}
+
+section div#label {
+	position: absolute;
+	top: 90%;
+	left: 25%;
 }
 
 footer {

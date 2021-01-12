@@ -9,7 +9,38 @@
   </head>
   <body>
     <div class="navbar">This is navbar</div>
-    <div class="container">This is container</div>
+    <div class="container">
+      <section id="renaissance">
+        <img class="front" src="./images/renaissance/frontCover.png" alt="" />
+        <div class="info">
+          <div id="heading">Renaissance</div>
+          <div id="released">Released 2/1/21</div>
+          <div id="extrainfo">
+            <span>Artist:</span> Maan Dodiya<br />
+            <span>Tracks:</span> 9<br />
+            <span>Length:</span> 75:26
+          </div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae,
+            blanditiis alias! Deserunt earum veritatis possimus quasi, at ipsum
+            eos sit, quisquam quos eius dicta, reprehenderit ullam accusamus.
+            Beatae, repellendus minima?
+          </p>
+          <div id="buttons">
+            <button id="purchase" onclick="purchase()">
+              Purchase for $6.69
+            </button>
+            <button
+              id="view"
+              class="renaissance"
+              onclick="changeCover(this.className)"
+            >
+              View Back Cover
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
     <footer>This is footer</footer>
   </body>
 </html>
