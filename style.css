@@ -224,7 +224,7 @@ body {
 	margin-top: 100px;
 	width: 5px;
 	height: 70%;
-	background-color: var(--heading-yellow);
+	background-color: var(--dull-yellow);
 	border-radius: 0 0 2.5px 2.5px;
 	display: flex;
 	align-items: center;
@@ -261,7 +261,7 @@ body {
 }
 
 .albums {
-	margin: 20px 0 40px;
+	padding: 20px 0 40px;
 	font-weight: normal;
 	font-size: 60px;
 	text-align: center;
