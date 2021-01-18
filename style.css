@@ -447,7 +447,7 @@ footer .line-3 img {
 	}
 
 	.container {
-		min-height: 0;
+		min-height: 100vh;
 	}
 
 	.container .about {
