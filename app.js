@@ -24,13 +24,35 @@ function changeCover(album) {
 	var image = document.querySelector("section#"+album+" img");
 	var button = document.querySelector("section#"+album+" .info .buttons .view")
 	if(image.className=="front") {
-		image.className="back";
+		image.className="back"
 		image.src = "./images/"+album+"/backCover.png"
 		button.innerHTML = "View Front Cover"
 	}
 	else{
-		image.className="front";
+		image.className="front"
 		image.src = "./images/"+album+"/frontCover.png"
 		button.innerHTML = "View Back Cover"
 	}		
 }
+
+function init() {
+	var items = document.querySelectorAll(".navbar a");
+	for (let i = 0; i < items.length; i++) {
+		const element = items[i];
+		element.onclick = function() {
+			focus(element);
+		}
+	}
+}
+
+function focus(item) {
+	var items = document.querySelectorAll(".navbar a");
+	for (let i = 0; i < items.length; i++) {
+		const element = items[i];
+		element.className = "";
+	}
+	item.className="select";
+	return true;
+}
+
+init()

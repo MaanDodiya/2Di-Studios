@@ -12,9 +12,9 @@
     <header class="navbar">
       <div class="items">
         <ul>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">DISCOGRAPHY</a></li>
-          <li><a href="#">ALBUMS</a></li>
+          <li><a href="#about" class="select" onclick="focus(this);">ABOUT</a></li>
+          <li><a href="#discography" onclick="focus(this)">DISCOGRAPHY</a></li>
+          <li><a href="#renaissance" onclick="focus(this)">ALBUMS</a></li>
         </ul>
       </div>
       <div class="github">
@@ -24,8 +24,27 @@
 				</a>
 			</div>
     </header>
-    <div class="container">
-      <section id="renaissance">
+    <div class="container" id="container">
+      <div class="about" id="about">
+        <h1><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel quia quisquam ipsum. Commodi perspiciatis asperiores neque reiciendis numquam assumenda quibusdam rerum, eius, ut, obcaecati blanditiis eos! Sapiente beatae aperiam praesentium.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente harum, vel et dolorem laborum deleniti voluptatibus nulla eos asperiores fugiat, deserunt delectus! Molestiae nam corporis optio impedit sunt blanditiis officiis.
+        </p>
+      </div>
+      <div class="discography" id="discography">
+        <div class="title"><span>DI</span><span>SC</span><span>OG</span><span>RA</span><span>PHY</span></div>
+        <div id="startpoint"></div>
+        <div id="timeline">
+        </div>
+        <div class="timelineAlbums" id="firstAlbum">
+          <div>Renaissance</div>
+          <div>2/1/21</div>
+        </div>
+      </div>
+      <div class="albums">
+        <div><span>AL</span><span>B</span><span>U</span><span>M</span><span>S</span></div>
+      </div>
+      <section id="renaissance" id="renaissance">
         <img class="front" src="./images/renaissance/frontCover.png" alt="" />
         <div class="info">
           <div class="heading">Renaissance</div>

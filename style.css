@@ -56,11 +56,13 @@
 	--bg-dark-grey: #111111;
 	--bg-grey: #141414;
 	--bg-light-grey: #1a1a1a;
+	--bg-light: #222222;
 	--text-dark-grey: #666666;
 	--text-grey: #b3b3b3;
 	--white: #e5e5e5;
 	--heading-yellow: #ffdd17;	
 	--dull-yellow: #ccad15;	
+	--dull-yellow-50: #ccae1580;	
 }
 
 /* STYLING */
@@ -98,14 +100,18 @@ body {
 	margin: 0 5vw;
 	padding: 0px 5px;
 	border-radius: 2px;
+	text-decoration: none;
+	color: var(--text-grey);
+	transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar .items ul a.select {
 	background-color: var(--dull-yellow);
 	color: var(--bg-dark-grey);
-	text-decoration: none;
 }
 
 .github {
   position: absolute;
-  top: 9px;
   right: 2%;
   display: flex;
   align-items: center;
@@ -134,11 +140,159 @@ body {
 	background-color: var(--bg-grey);
 }
 
+.container .about {
+	width: 100%;
+	background-color: var(--bg-grey);
+	padding-top: 15px;
+	/* border-bottom: var(--dull-yellow-50) dashed 2px; */
+}
+
+.about h1 {
+	font-weight: normal;
+	font-size: 60px;
+	text-align: center;
+	color: var(--heading-yellow);
+}
+
+.about h1 span:nth-child(1) {
+	font-family: "BasisGrotesquePro-Black", serif;
+}
+
+.about h1 span:nth-child(2) {
+	font-family: "BasisGrotesquePro-Bold", serif;
+}
+
+.about h1 span:nth-child(3) {
+	font-family: "BasisGrotesquePro-Medium", serif;
+}
+
+.about h1 span:nth-child(4) {
+	font-family: "BasisGrotesquePro-Regular", serif;
+}
+
+.about h1 span:nth-child(5) {
+	font-family: "BasisGrotesquePro-Light", serif;
+}
+
+.about p {
+	padding: 30px;
+	color: var(--text-grey);
+}
+
+.discography {
+	position: relative;
+	height: 80vh;
+	width: 100%;
+	background-color: var(--bg-light);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.discography .title {
+	position: absolute;
+	top: 20px;
+	left: auto;
+	font-weight: normal;
+	font-size: 60px;
+	text-align: center;
+	color: var(--heading-yellow);
+}
+
+.discography .title span:nth-child(1) {
+	font-family: "BasisGrotesquePro-Black", serif;
+}
+
+.discography .title span:nth-child(2) {
+	font-family: "BasisGrotesquePro-Bold", serif;
+}
+
+.discography .title span:nth-child(3) {
+	font-family: "BasisGrotesquePro-Medium", serif;
+}
+
+.discography .title span:nth-child(4) {
+	font-family: "BasisGrotesquePro-Regular", serif;
+}
+
+.discography .title span:nth-child(5) {
+	font-family: "BasisGrotesquePro-Light", serif;
+}
+
+.discography #timeline {
+	margin-top: 100px;
+	width: 5px;
+	height: 70%;
+	background-color: var(--heading-yellow);
+	border-radius: 0 0 2.5px 2.5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.discography #startpoint {
+	margin-top: 75px;
+	position: absolute;
+	top: 9%;
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	background-color: var(--heading-yellow);
+}
+
+.discography .timelineAlbums {
+	color: var(--white);
+	position: absolute;
+	left: 52%;
+	top: 125px;
+}
+
+.discography .timelineAlbums div:nth-child(1) {
+	font-family: "BasisGrotesquePro-Medium", serif;
+	font-size: 1.3em;
+}
+
+.discography .timelineAlbums div:nth-child(2) {
+	font-family: "BasisGrotesquePro-Medium", serif;
+	color: var(--text-dark-grey);
+	font-size: 0.8em;
+	margin-top: -5px;
+}
+
+.albums {
+	margin: 20px 0 40px;
+	font-weight: normal;
+	font-size: 60px;
+	text-align: center;
+	color: var(--heading-yellow);
+}
+
+.albums span:nth-child(1) {
+	font-family: "BasisGrotesquePro-Black", serif;
+}
+
+.albums span:nth-child(2) {
+	font-family: "BasisGrotesquePro-Bold", serif;
+}
+
+.albums span:nth-child(3) {
+	font-family: "BasisGrotesquePro-Medium", serif;
+}
+
+.albums span:nth-child(4) {
+	font-family: "BasisGrotesquePro-Regular", serif;
+}
+
+.albums span:nth-child(5) {
+	font-family: "BasisGrotesquePro-Light", serif;
+}
+
 section {
 	position: relative;
 	display: flex;
 	justify-content: space-around;
-	padding: 40px 0;
+	padding: 0 0 40px 0;
 }
 
 section img{
@@ -147,7 +301,7 @@ section img{
 }
 
 section .info {
-	padding: 10px 30px;
+	padding: 0px 30px 10px;
 	color: var(--text-grey);
 }
 
