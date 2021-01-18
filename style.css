@@ -94,10 +94,17 @@ body {
 	list-style: none;
 }
 
+.navbar .items ul li{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+}
+
 .navbar .items ul a {
 	font-family: "BasisGrotesquePro-Bold", serif;
 	font-size: 20px;
-	margin: 0 5vw;
+	margin: auto 5vw;
 	padding: 0px 5px;
 	border-radius: 2px;
 	text-decoration: none;
@@ -412,6 +419,163 @@ footer .line-3 {
 footer .line-3 img {
 	height: 18px;
 }
+
+
+/* #### MEDIA QUERIES ####  */
+
+@media only screen and (max-width: 992px) {
+	.navbar {
+		height: 6vw;
+	}
+	
+	.navbar .items ul a {
+		font-size: 2vw;
+		margin: 0 5vw;
+		padding: 0px 0.5vw;
+		border-radius: 0.2vw;
+	}
+
+	.github a {
+		font-size: 1.6vw;
+		padding: 0.7vw;
+	}
+	
+	.github-logo {
+		height: 1.8vw;
+		width: 1.8vw;
+		margin-right: 0.5vw;
+	}
+
+	.container {
+		min-height: 0;
+	}
+
+	.container .about {
+		padding-top: 1.5vw;
+	}
+	
+	.about h1 {
+		font-size: 6vw;
+	}
+	
+	.about p {
+		font-size: 1.6vw;
+		padding: 3vw;
+	}	
+	
+	.discography {
+		height: 60vw;
+	}
+	
+	.discography .title {
+		top: 2vw;
+		font-size: 6vw;
+	}
+	
+	.discography #timeline {
+		margin-top: 8.5vw;
+		width: 0.5vw;
+		height: 70%;
+		border-radius: 0 0 0.25vw 0.25vw;
+	}
+	
+	.discography #startpoint {
+		margin-top: 7.5vw;
+		width: 1.6vw;
+		height: 1.6vw;
+		border-radius: 0.8vw;
+	}
+	
+	.discography .timelineAlbums {
+		top: 12.5vw;
+	}
+	
+	.discography .timelineAlbums div:nth-child(1) {
+		font-size: 2vw;
+	}
+	
+	.discography .timelineAlbums div:nth-child(2) {
+		font-size: 1.2vw;
+		margin-top: -0.5vw;
+	}
+
+	.albums {
+		padding: 2vw 0 4vw;
+		font-size: 6vw;
+	}
+
+	section {
+		font-size: 1.6vw;
+		padding: 0 0 4vw 0;
+	}
+	
+	section img{
+		width: 40vw;
+		height: 40vw;
+	}
+	
+	section .info {
+		padding: 0px 3vw 1vw;
+	}
+	
+	section .info .heading{
+		font-size: 4vw;
+		margin-bottom: -0.5vw;
+	}
+	
+	section .info .released {
+		margin: 0 0 2vw 0.2vw;
+		font-size: 1.2vw;
+	}
+	
+	.extrainfo {
+		margin-bottom: 2vw;
+	}
+
+	section div.buttons {
+		margin: 5vw;
+	}
+
+	section button.purchase {
+		font-size: 1.6vw;
+		padding: 0.8vw;
+		border-radius: 0.2vw;
+	}
+	
+	section button.view {
+		margin-top: 0.8vw;
+		font-size: 1.3vw;
+	}
+	
+	footer {
+		height: 7vw;
+	}
+	
+	footer .heart {
+		margin: 0 0.5vw;
+		height: 1.3vw;
+		width: 1.3vw;
+	}
+	
+	footer .line-1 {
+		font-size: 1.5vw;
+	}
+	
+	footer .line-2 {
+		font-size: 1.6vw;
+	}
+	
+	footer .line-3 {
+		right: 3vw;
+		font-size: 1.5vw;
+	}
+	
+	footer .line-3 img {
+		height: 1.8vw;
+	}
+
+}
+
 
 @keyframes pound {
   to {
