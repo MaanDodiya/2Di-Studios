@@ -72,6 +72,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "BasisGrotesquePro-Regular", serif;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -260,12 +261,20 @@ body {
 	font-size: 1.3em;
 }
 
+.discography .timelineAlbums div:nth-child(1) a {
+	color: var(--white);
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+
 .discography .timelineAlbums div:nth-child(2) {
 	font-family: "BasisGrotesquePro-Medium", serif;
 	color: var(--text-dark-grey);
 	font-size: 0.8em;
 	margin-top: -5px;
 }
+
 
 .albums {
 	padding: 20px 0 40px;
