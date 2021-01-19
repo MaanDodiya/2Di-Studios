@@ -155,6 +155,11 @@ body {
 	margin: auto;
 	min-height: 100vh;
 	background-color: var(--bg-grey);
+	background-image: url("./images/textures/dusty1.jpg");
+	background-blend-mode: overlay;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .container .about {
@@ -165,7 +170,7 @@ body {
 	background-blend-mode: overlay;
 	background-size: cover;
 	background-position: center;
-	/* border-bottom: var(--dull-yellow-50) dashed 2px; */
+	border-bottom: var(--dull-yellow-50) dashed 0.15vw;
 }
 
 .about h1 {
@@ -213,6 +218,7 @@ body {
 	background-blend-mode: color-dodge;
 	background-size: cover;
 	background-position: center;
+	border-bottom: var(--dull-yellow-50) dashed 0.15vw;
 }
 
 .discography .title {

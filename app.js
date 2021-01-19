@@ -9,8 +9,8 @@ const data = {
 		},
 		"price": "6.69",
 		"description": " ",
-		"backCover": "./images/renaissance/backCover.png",
-		"frontCover": "./images/renaissance/frontCover.png"
+		"backCover": "./images/renaissance/backCover.jpg",
+		"frontCover": "./images/renaissance/frontCover.jpg"
 	}
 }
 
@@ -25,12 +25,12 @@ function changeCover(album) {
 	var button = document.querySelector("section#"+album+" .info .buttons .view")
 	if(image.className=="front") {
 		image.className="back"
-		image.src = "./images/"+album+"/backCover.png"
+		image.src = "./images/"+album+"/backCover.jpg"
 		button.innerHTML = "View Front Cover"
 	}
 	else{
 		image.className="front"
-		image.src = "./images/"+album+"/frontCover.png"
+		image.src = "./images/"+album+"/frontCover.jpg"
 		button.innerHTML = "View Back Cover"
 	}		
 }
