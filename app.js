@@ -20,8 +20,10 @@ const data = {
 
 // Code starts
 
-function purchase() {
-	alert("Thanks for the Purchase!");
+function purchase(albumName) {
+	alert("Thanks for the Purchase!\nPress OK to download Album Covers");
+	window.open('./images/' + albumName[0].id + '/backCoverHQ.png');
+	window.open('./images/' + albumName[0].id + '/frontCoverHQ.png');
 }
 
 function changeCover(album) {
@@ -80,7 +82,7 @@ function addContent() {
 
 		infoDiv.innerHTML = "<div class=\"heading\"></div><div class=\"released\">Released&nbsp;</div><div class=\"extrainfo\"><span>Artist:</span>&nbsp;" + element.artist + "<br /><span>Tracks:</span>&nbsp;" + element.tracks + "<br /><span>Length:</span>&nbsp" + element.duration + "</div>"
 
-		infoDiv.innerHTML += "<p>" + element.description + "</p><div class=\"buttons\"><button class=\"purchase\" onclick=\"purchase()\">Purchase for $" + element.price + "</button><button id=\"" + element.name + "\" class=\"view\" onclick=\"changeCover(this.id)\">View Back Cover</button></div>"
+		infoDiv.innerHTML += "<p>" + element.description + "</p><div class=\"buttons\"><button class=\"purchase\" onclick=\"purchase(" + data[Object.keys(data)[i]].name + ")\">Purchase for $" + element.price + "</button><button id=\"" + element.name + "\" class=\"view\" onclick=\"changeCover(this.id)\">View Back Cover</button></div>"
 
 		infoDiv.children[0].innerHTML += element.alias;
 		infoDiv.children[1].innerHTML += element.date.day + "/" + element.date.month + "/" + element.date.year;
