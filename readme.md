@@ -1,5 +1,5 @@
 # 2Di Studios Website
 
-<a href="https://maandodiya.github.io/2Di-Studios/" target="_blank">Beta Website</a>
+[Beta Website]("https://maandodiya.github.io/2Di-Studios/"){:target="\_blank"}
 
 Website under construction 🏗
