@@ -1,53 +1,28 @@
 /* FONTS */
 
 @font-face {
-  font-family: BasisGrotesquePro-Black;
-  src: url(./fonts/BasisGrotesquePro-Black.ttf);
+  font-family: BGP-Black;
+  src: url(./fonts/BGP-Black.ttf);
 }
 
 @font-face {
-  font-family: BasisGrotesquePro-BlackItalic;
-  src: url(./fonts/BasisGrotesquePro-BlackItalic.ttf);
+  font-family: BGP-Bold;
+  src: url(./fonts/BGP-Bold.ttf);
 }
 
 @font-face {
-  font-family: BasisGrotesquePro-Bold;
-  src: url(./fonts/BasisGrotesquePro-Bold.ttf);
+  font-family: BGP-Light;
+  src: url(./fonts/BGP-Light.ttf);
 }
 
 @font-face {
-  font-family: BasisGrotesquePro-BoldItalic;
-  src: url(./fonts/BasisGrotesquePro-BoldItalic.ttf);
+  font-family: BGP-Medium;
+  src: url(./fonts/BGP-Medium.ttf);
 }
 
 @font-face {
-  font-family: BasisGrotesquePro-Italic;
-  src: url(./fonts/BasisGrotesquePro-Italic.ttf);
-}
-
-@font-face {
-  font-family: BasisGrotesquePro-Light;
-  src: url(./fonts/BasisGrotesquePro-Light.ttf);
-}
-
-@font-face {
-  font-family: BasisGrotesquePro-LightItalic;
-  src: url(./fonts/BasisGrotesquePro-LightItalic.ttf);
-}
-
-@font-face {
-  font-family: BasisGrotesquePro-Medium;
-  src: url(./fonts/BasisGrotesquePro-Medium.ttf);
-}
-
-@font-face {
-  font-family: BasisGrotesquePro-MediumItalic;
-  src: url(./fonts/BasisGrotesquePro-MediumItalic.ttf);
-}
-
-@font-face {
-  font-family: BasisGrotesquePro-Regular;
-  src: url(./fonts/BasisGrotesquePro-Regular.ttf);
+  font-family: BGP-Regular;
+  src: url(./fonts/BGP-Regular.ttf);
 }
 
 /* VARIABLES */
@@ -71,7 +46,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "BasisGrotesquePro-Regular", serif;
+	font-family: "BGP-Regular", serif;
 	scroll-behavior: smooth;
 }
 
@@ -112,7 +87,7 @@ body {
 }
 
 .navbar .items ul a {
-	font-family: "BasisGrotesquePro-Bold", serif;
+	font-family: "BGP-Bold", serif;
 	font-size: 20px;
 	margin: auto 5vw;
 	padding: 0px 5px;
@@ -135,7 +110,7 @@ body {
 }
 
 .github a {
-	font-family: "BasisGrotesquePro-Medium", serif;
+	font-family: "BGP-Medium", serif;
 	font-size: 16px;
 	display: flex;
   padding: 0.7vw;
@@ -181,23 +156,23 @@ body {
 }
 
 .about h1 span:nth-child(1) {
-	font-family: "BasisGrotesquePro-Black", serif;
+	font-family: "BGP-Black", serif;
 }
 
 .about h1 span:nth-child(2) {
-	font-family: "BasisGrotesquePro-Bold", serif;
+	font-family: "BGP-Bold", serif;
 }
 
 .about h1 span:nth-child(3) {
-	font-family: "BasisGrotesquePro-Medium", serif;
+	font-family: "BGP-Medium", serif;
 }
 
 .about h1 span:nth-child(4) {
-	font-family: "BasisGrotesquePro-Regular", serif;
+	font-family: "BGP-Regular", serif;
 }
 
 .about h1 span:nth-child(5) {
-	font-family: "BasisGrotesquePro-Light", serif;
+	font-family: "BGP-Light", serif;
 }
 
 .about p {
@@ -232,23 +207,23 @@ body {
 }
 
 .discography .title span:nth-child(1) {
-	font-family: "BasisGrotesquePro-Black", serif;
+	font-family: "BGP-Black", serif;
 }
 
 .discography .title span:nth-child(2) {
-	font-family: "BasisGrotesquePro-Bold", serif;
+	font-family: "BGP-Bold", serif;
 }
 
 .discography .title span:nth-child(3) {
-	font-family: "BasisGrotesquePro-Medium", serif;
+	font-family: "BGP-Medium", serif;
 }
 
 .discography .title span:nth-child(4) {
-	font-family: "BasisGrotesquePro-Regular", serif;
+	font-family: "BGP-Regular", serif;
 }
 
 .discography .title span:nth-child(5) {
-	font-family: "BasisGrotesquePro-Light", serif;
+	font-family: "BGP-Light", serif;
 }
 
 .discography #timeline {
@@ -280,7 +255,7 @@ body {
 }
 
 .discography .timelineAlbums div:nth-child(1) {
-	font-family: "BasisGrotesquePro-Medium", serif;
+	font-family: "BGP-Medium", serif;
 	font-size: 1.3em;
 }
 
@@ -292,7 +267,7 @@ body {
 }
 
 .discography .timelineAlbums div:nth-child(2) {
-	font-family: "BasisGrotesquePro-Medium", serif;
+	font-family: "BGP-Medium", serif;
 	color: var(--text-dark-grey);
 	font-size: 0.8em;
 	margin-top: -5px;
@@ -313,23 +288,23 @@ body {
 }
 
 .albums span:nth-child(1) {
-	font-family: "BasisGrotesquePro-Black", serif;
+	font-family: "BGP-Black", serif;
 }
 
 .albums span:nth-child(2) {
-	font-family: "BasisGrotesquePro-Bold", serif;
+	font-family: "BGP-Bold", serif;
 }
 
 .albums span:nth-child(3) {
-	font-family: "BasisGrotesquePro-Medium", serif;
+	font-family: "BGP-Medium", serif;
 }
 
 .albums span:nth-child(4) {
-	font-family: "BasisGrotesquePro-Regular", serif;
+	font-family: "BGP-Regular", serif;
 }
 
 .albums span:nth-child(5) {
-	font-family: "BasisGrotesquePro-Light", serif;
+	font-family: "BGP-Light", serif;
 }
 
 section {
@@ -356,7 +331,7 @@ section .info {
 }
 
 section .info .heading{
-	font-family: "BasisGrotesquePro-Medium", serif;
+	font-family: "BGP-Medium", serif;
 	font-size: 2.5em;
 	color: var(--heading-yellow);
 	margin-bottom: -5px;
@@ -400,7 +375,7 @@ section button:active {
 section button.purchase {
 	width: 100%;
 	font-size: 16px;
-	font-family: "BasisGrotesquePro-Bold", serif;
+	font-family: "BGP-Bold", serif;
 	padding: 8px;
 	border-radius: 2px;
 	background-color: var(--dull-yellow);
@@ -408,7 +383,7 @@ section button.purchase {
 
 section button.view {
 	margin-top: 8px;
-	font-family: "BasisGrotesquePro-Medium", serif;
+	font-family: "BGP-Medium", serif;
 	font-size: 13px;
 	color: var(--dull-yellow);
 }
@@ -447,7 +422,7 @@ footer .line-1 {
 
 footer .line-2 {
 	font-size: 16px;
-	font-family: "BasisGrotesquePro-Medium", serif;
+	font-family: "BGP-Medium", serif;
   color: var(--white);
 }
 
@@ -458,7 +433,7 @@ footer .line-3 {
 	display: flex;
   align-items: center;
   justify-content: center;
-	font-family: "BasisGrotesquePro-Medium", serif;
+	font-family: "BGP-Medium", serif;
   font-size: 15px;
   color: var(--text-grey);
 }
