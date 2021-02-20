@@ -72,6 +72,8 @@ function addContent() {
 		var image = document.createElement("img");
 		image.className = "front";
 		image.src = element.frontCover;
+		image.height = "540";
+		image.width = "540";
 
 		var infoDiv = document.createElement("div");
 		infoDiv.className = "info";
