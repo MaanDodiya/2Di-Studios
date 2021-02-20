@@ -207,7 +207,7 @@ body {
 
 .discography {
 	position: relative;
-	height: 80vh;
+	height: 600px;
 	width: 100%;
 	background-color: var(--bg-light);
 	display: flex;
