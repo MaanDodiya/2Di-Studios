@@ -340,6 +340,7 @@ section .album-image{
 	width: 60%;
 	height: 60%;
 	flex-shrink: 0;
+	border-radius: 0 0.75% 0.75% 0;
 }
 
 section .info {
@@ -408,9 +409,38 @@ section button.view {
 }
 
 .photo-gallery {
-	width: 100px;
-	height: 50px;
-	/* background-color: white; */
+	width: 100%;
+	/* background-color: white;	 */
+}
+
+.photo-gallery img {
+	margin: 1.33% 0 0 1.33%;
+	width: 14%;
+	height: auto;
+	opacity: 0.4;
+	cursor: pointer;
+	transition: opacity 0.5s;
+	border-radius: 3%;
+}
+
+.photo-gallery img.active {
+	opacity: 0.8;
+}
+
+.photo-gallery img:hover {
+	opacity: 0.8;
+}
+
+.photo-gallery img:active {
+	text-decoration: none;
+}
+
+.photo-gallery img:focus {
+	text-decoration: none;
+}
+
+.photo-gallery img:first-child {
+	margin: 1% 0 0 0;
 }
 
 /* ############# */
@@ -549,12 +579,7 @@ footer .line-3 img {
 		font-size: 1.6vw;
 		padding: 0 0 4vw 0;
 	}
-	
-	section img{
-		width: 40vw;
-		height: 40vw;
-	}
-	
+
 	section .info {
 		padding: 0px 3vw 1vw;
 	}

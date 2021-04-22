@@ -14,31 +14,22 @@ const data = {
 		},
 		"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, blanditiis alias! Deserunt earum veritatis possimus quasi, at ipsum eos sit, quisquam quos eius dicta, reprehenderit ullam accusamus. Beatae, repellendus minima?",
 		"backCover": "./images/renaissance/backCover.jpg",
-		"frontCover": "./images/renaissance/frontCover.jpg"
+		"frontCover": "./images/renaissance/frontCover.jpg",
+		"backCD" : "./images/renaissance/backCover.jpg",
+		"frontCD": "./images/renaissance/frontCover.jpg"
 	}
 }
 
 // Code starts
 
 function purchase(albumName) {
-	alert("Thanks for the Purchase!\nPress OK to download Album Covers");
-	window.open('./images/' + albumName[0].id + '/backCoverHQ.png');
-	window.open('./images/' + albumName[0].id + '/frontCoverHQ.png');
-}
-
-function changeCover(album) {
-	var image = document.querySelector("section#"+album+" img");
-	var button = document.querySelector("section#"+album+" .info .buttons .view");
-	if(image.className=="front") {
-		image.className="back";
-		image.src = "./images/"+album+"/backCover.jpg";
-		button.innerHTML = "View Front Cover";
-	}
-	else{
-		image.className="front";
-		image.src = "./images/"+album+"/frontCover.jpg";
-		button.innerHTML = "View Back Cover";
-	}		
+	alert("Thanks for the Purchase!\nPress OK to download");
+	var image = document.querySelector(`img.${albumName}.image-gallery.active`);
+	var location = image.src.split(".");
+	location[3] += "HQ";
+	location[4] = "png";
+	location = location.join(".");
+	window.open(location);
 }
 
 function init() {
@@ -61,13 +52,25 @@ function focus(item) {
 	return true;
 }
 
+function changeInGallery(element) {
+	var album = element.classList[0];
+	var albumImgs = document.querySelectorAll(`img.${album}`);
+	for (let i = 0; i < albumImgs.length; i++) {
+		if(albumImgs[i].classList.length == 3) {
+			albumImgs[i].classList.remove("active");
+		}
+	}
+	element.className += " active";
+	var bigPic = document.querySelector(`section.${album}`);
+	bigPic.children[0].src = element.src;
+}
+
 function addContent() {
 	var container = document.querySelector("#container");
 	for (let i = 0; i < Object.keys(data).length; i++) {
 		const element = data[Object.keys(data)[i]];
 
 		var section = document.createElement("section");
-		section.id = element.name;
 		section.className = element.name;
 
 		var image = document.createElement("img");
@@ -79,15 +82,25 @@ function addContent() {
 		var infoDiv = document.createElement("div");
 		infoDiv.className = "info";
 
-		infoDiv.innerHTML = "<div class=\"heading\"></div><div class=\"released\">Released&nbsp;</div><div class=\"extrainfo\"><span>Artist:</span>&nbsp;" + element.artist + "<br /><span>Tracks:</span>&nbsp;" + element.tracks + "<br /><span>Length:</span>&nbsp" + element.duration + "</div>"
+		infoDiv.innerHTML = "<div class=\"heading\"></div><div class=\"released\">Released&nbsp;</div><div class=\"extrainfo\"><span>Artist:</span>&nbsp;" + element.artist + "<br /><span>Tracks:</span>&nbsp;" + element.tracks + "<br /><span>Length:</span>&nbsp" + element.duration + "</div>";
 
-		infoDiv.innerHTML += "<p>" + element.description + "</p><div class=\"buttons\"><button class=\"purchase\" onclick=\"purchase(" + data[Object.keys(data)[i]].name + ")\">Purchase for $" + element.price + "</button><button id=\"" + element.name + "\" class=\"view\" onclick=\"changeCover(this.id)\">View Back Cover</button></div>"
+		infoDiv.innerHTML += "<p>" + element.description + "</p><div class=\"buttons\"><button class=\"" + data[Object.keys(data)[i]].name +  " purchase\" onclick=\"purchase(this.classList[0])\">Purchase for $" + element.price;
 
 		infoDiv.children[0].innerHTML += element.alias;
 		infoDiv.children[1].innerHTML += element.date.day + "/" + element.date.month + "/" + element.date.year;
 
 		var photoGallery = document.createElement("div");
 		photoGallery.className = "photo-gallery";
+
+		photoGallery.innerHTML = "<img class=\"image-gallery active\" onclick=\"changeInGallery(this)\"><img class=\"image-gallery\" onclick=\"changeInGallery(this)\"><img class=\"image-gallery\" onclick=\"changeInGallery(this)\"><img class=\"image-gallery\" onclick=\"changeInGallery(this)\">";
+		photoGallery.children[0].src = element.frontCover;
+		photoGallery.children[0].className = element.name + " " + photoGallery.children[0].className;
+		photoGallery.children[1].src = element.backCover;
+		photoGallery.children[1].className = element.name + " " + photoGallery.children[1].className;
+		photoGallery.children[2].src = element.frontCD;
+		photoGallery.children[2].className = element.name + " " + photoGallery.children[2].className;
+		photoGallery.children[3].src = element.backCD;
+		photoGallery.children[3].className = element.name + " " + photoGallery.children[3].className;
 
 		section.appendChild(image);
 		section.appendChild(infoDiv);
