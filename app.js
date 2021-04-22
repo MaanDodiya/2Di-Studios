@@ -63,7 +63,6 @@ function focus(item) {
 
 function addContent() {
 	var container = document.querySelector("#container");
-	// console.log(Object.keys(data).length);
 	for (let i = 0; i < Object.keys(data).length; i++) {
 		const element = data[Object.keys(data)[i]];
 
@@ -72,7 +71,7 @@ function addContent() {
 		section.className = element.name;
 
 		var image = document.createElement("img");
-		image.className = "front";
+		image.className = "front album-image";
 		image.src = element.frontCover;
 		image.height = "540";
 		image.width = "540";
@@ -87,8 +86,12 @@ function addContent() {
 		infoDiv.children[0].innerHTML += element.alias;
 		infoDiv.children[1].innerHTML += element.date.day + "/" + element.date.month + "/" + element.date.year;
 
+		var photoGallery = document.createElement("div");
+		photoGallery.className = "photo-gallery";
+
 		section.appendChild(image);
 		section.appendChild(infoDiv);
+		section.appendChild(photoGallery);
 		container.appendChild(section);
 	}
 }

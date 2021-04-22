@@ -326,6 +326,7 @@ body {
 section {
 	position: relative;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	padding: 0 0 40px 0;
 	background-color: var(--bg-grey);
@@ -335,13 +336,15 @@ section {
 	background-position: center;
 }
 
-section img{
+section .album-image{
 	width: 60%;
 	height: 60%;
 	flex-shrink: 0;
 }
 
 section .info {
+	width: 40%;
+	height: 60%;
 	padding: 0px 30px 10px;
 	color: var(--text-grey);
 }
@@ -368,7 +371,7 @@ section .info .released {
 }
 
 section div.buttons {
-	margin: 50px;
+	padding: 45px 45px 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -393,7 +396,7 @@ section button.purchase {
 	font-size: 16px;
 	font-family: "BGP-Bold", serif;
 	padding: 8px;
-	border-radius: 2px;
+	border-radius: 3px;
 	background-color: var(--dull-yellow);
 }
 
@@ -402,6 +405,12 @@ section button.view {
 	font-family: "BGP-Medium", serif;
 	font-size: 13px;
 	color: var(--dull-yellow);
+}
+
+.photo-gallery {
+	width: 100px;
+	height: 50px;
+	/* background-color: white; */
 }
 
 /* ############# */
@@ -565,13 +574,13 @@ footer .line-3 img {
 	}
 
 	section div.buttons {
-		margin: 5vw;
+		padding: 3vw 3vw 0;
 	}
 
 	section button.purchase {
 		font-size: 1.6vw;
 		padding: 0.8vw;
-		border-radius: 0.2vw;
+		border-radius: 0.3vw;
 	}
 	
 	section button.view {
