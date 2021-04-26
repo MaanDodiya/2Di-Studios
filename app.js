@@ -112,27 +112,27 @@ function addContent() {
 		photoGallery.children[0].classList.add("image-gallery");
 		photoGallery.children[0].classList.add("frontCover");
 		photoGallery.children[0].classList.add("active");
-		photoGallery.children[0].src = "." + element.frontCoverSmol;
+		photoGallery.children[0].src = element.frontCoverSmol;
 		
 		photoGallery.children[1].classList.add(element.name);
 		photoGallery.children[1].classList.add("image-gallery");
 		photoGallery.children[1].classList.add("backCover");
-		photoGallery.children[1].src = "." + element.backCoverSmol;
+		photoGallery.children[1].src = element.backCoverSmol;
 		
 		photoGallery.children[2].classList.add(element.name);
 		photoGallery.children[2].classList.add("image-gallery");
 		photoGallery.children[2].classList.add("image3");
-		photoGallery.children[2].src = "." + element.image3Smol;
+		photoGallery.children[2].src = element.image3Smol;
 		
 		photoGallery.children[3].classList.add(element.name);
 		photoGallery.children[3].classList.add("image-gallery");
 		photoGallery.children[3].classList.add("image4");
-		photoGallery.children[3].src = "." + element.image4Smol;
+		photoGallery.children[3].src = element.image4Smol;
 		
 		photoGallery.children[4].classList.add(element.name);
 		photoGallery.children[4].classList.add("image-gallery");
 		photoGallery.children[4].classList.add("image5");
-		photoGallery.children[4].src = "." + element.image5Smol;
+		photoGallery.children[4].src = element.image5Smol;
 		
 
 		section.appendChild(image);
