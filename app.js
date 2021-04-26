@@ -1,6 +1,6 @@
 // Down comes the list of albums and details
 const data = {
-	"Renaissance": {
+	"renaissance": {
 		"name": "renaissance",
 		"alias": "Renaissance",
 		"artist": "Maan Dodiya",
@@ -10,13 +10,24 @@ const data = {
 		"date": {
 			"day": "2",
 			"month": "1",
-			"year": "21"
+			"year": "21",
 		},
 		"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, blanditiis alias! Deserunt earum veritatis possimus quasi, at ipsum eos sit, quisquam quos eius dicta, reprehenderit ullam accusamus. Beatae, repellendus minima?",
 		"backCover": "./images/renaissance/backCover.jpg",
+		"backCoverSmol": "./images/renaissance/backCover-smol.jpg",
+		"backCoverHQ": "./images/renaissance/backCover-HQ.png",
 		"frontCover": "./images/renaissance/frontCover.jpg",
-		"backCD" : "./images/renaissance/backCover.jpg",
-		"frontCD": "./images/renaissance/frontCover.jpg"
+		"frontCoverSmol": "./images/renaissance/frontCover-smol.jpg",
+		"frontCoverHQ": "./images/renaissance/frontCove-HQ.png",
+		"image3" : "./images/renaissance/CD.jpg",
+		"image3Smol" : "./images/renaissance/CD-smol.jpg",
+		"image3HQ" : "./images/renaissance/CD-HQ.png",
+		"image4": "./images/renaissance/record.jpg",
+		"image4Smol": "./images/renaissance/record-smol.jpg",
+		"image4HQ": "./images/renaissance/record-HQ.png",
+		"image5": "./images/renaissance/floppy.jpg",
+		"image5Smol": "./images/renaissance/floppy-smol.jpg",
+		"image5HQ": "./images/renaissance/floppy-HQ.png"
 	}
 }
 
@@ -25,10 +36,10 @@ const data = {
 function purchase(albumName) {
 	alert("Thanks for the Purchase!\nPress OK to download");
 	var image = document.querySelector(`img.${albumName}.image-gallery.active`);
-	var location = image.src.split(".");
-	location[3] += "HQ";
-	location[4] = "png";
-	location = location.join(".");
+	var temp = image.src.split("/");
+	var album = temp[temp.length-2];
+	var type = temp[temp.length-1].split("-")[0];
+	var location = `./images/${album}/${type}-HQ.png`
 	window.open(location);
 }
 
@@ -56,13 +67,16 @@ function changeInGallery(element) {
 	var album = element.classList[0];
 	var albumImgs = document.querySelectorAll(`img.${album}`);
 	for (let i = 0; i < albumImgs.length; i++) {
-		if(albumImgs[i].classList.length == 3) {
+		if(albumImgs[i].classList.length == 4) {
 			albumImgs[i].classList.remove("active");
 		}
 	}
-	element.className += " active";
 	var bigPic = document.querySelector(`section.${album}`);
-	bigPic.children[0].src = element.src;
+	var image = element.classList;
+	image = image[image.length-1];
+	bigPic.children[0].src = data[album][image];
+	element.className += " active";
+
 }
 
 function addContent() {
@@ -92,15 +106,34 @@ function addContent() {
 		var photoGallery = document.createElement("div");
 		photoGallery.className = "photo-gallery";
 
-		photoGallery.innerHTML = "<img class=\"image-gallery active\" onclick=\"changeInGallery(this)\"><img class=\"image-gallery\" onclick=\"changeInGallery(this)\"><img class=\"image-gallery\" onclick=\"changeInGallery(this)\"><img class=\"image-gallery\" onclick=\"changeInGallery(this)\">";
-		photoGallery.children[0].src = element.frontCover;
-		photoGallery.children[0].className = element.name + " " + photoGallery.children[0].className;
-		photoGallery.children[1].src = element.backCover;
-		photoGallery.children[1].className = element.name + " " + photoGallery.children[1].className;
-		photoGallery.children[2].src = element.frontCD;
-		photoGallery.children[2].className = element.name + " " + photoGallery.children[2].className;
-		photoGallery.children[3].src = element.backCD;
-		photoGallery.children[3].className = element.name + " " + photoGallery.children[3].className;
+		photoGallery.innerHTML = "<img onclick=\"changeInGallery(this)\"><img onclick=\"changeInGallery(this)\"><img onclick=\"changeInGallery(this)\"><img onclick=\"changeInGallery(this)\"><img onclick=\"changeInGallery(this)\">";
+		
+		photoGallery.children[0].classList.add(element.name);
+		photoGallery.children[0].classList.add("image-gallery");
+		photoGallery.children[0].classList.add("frontCover");
+		photoGallery.children[0].classList.add("active");
+		photoGallery.children[0].src = "." + element.frontCoverSmol;
+		
+		photoGallery.children[1].classList.add(element.name);
+		photoGallery.children[1].classList.add("image-gallery");
+		photoGallery.children[1].classList.add("backCover");
+		photoGallery.children[1].src = "." + element.backCoverSmol;
+		
+		photoGallery.children[2].classList.add(element.name);
+		photoGallery.children[2].classList.add("image-gallery");
+		photoGallery.children[2].classList.add("image3");
+		photoGallery.children[2].src = "." + element.image3Smol;
+		
+		photoGallery.children[3].classList.add(element.name);
+		photoGallery.children[3].classList.add("image-gallery");
+		photoGallery.children[3].classList.add("image4");
+		photoGallery.children[3].src = "." + element.image4Smol;
+		
+		photoGallery.children[4].classList.add(element.name);
+		photoGallery.children[4].classList.add("image-gallery");
+		photoGallery.children[4].classList.add("image5");
+		photoGallery.children[4].src = "." + element.image5Smol;
+		
 
 		section.appendChild(image);
 		section.appendChild(infoDiv);
@@ -111,39 +144,3 @@ function addContent() {
 
 init()
 addContent()
-
-
-/* Original hardcoded HTML Code
-
-<!-- <section id="renaissance" id="renaissance">
-        <img class="front" src="./images/renaissance/frontCover.jpg" alt="" />
-        <div class="info">
-          <div class="heading">Renaissance</div>
-          <div class="released">Released 2/1/21</div>
-          <div class="extrainfo">
-            <span>Artist:</span> Maan Dodiya<br />
-            <span>Tracks:</span> 9<br />
-            <span>Length:</span> 29:35
-          </div>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae,
-            blanditiis alias! Deserunt earum veritatis possimus quasi, at ipsum
-            eos sit, quisquam quos eius dicta, reprehenderit ullam accusamus.
-            Beatae, repellendus minima?
-          </p>
-          <div class="buttons">
-            <button class="purchase" onclick="purchase()">
-              Purchase for $6.69
-            </button>
-            <button
-              id="renaissance"
-              class="view"
-              onclick="changeCover(this.id)"
-            >
-              View Back Cover
-            </button>
-          </div>
-        </div>
-      </section> -->
-
-*/
