@@ -52,9 +52,9 @@
 
 body {
 	background-color: var(--bg-light-grey);
-	background-image: url("./images/textures/dust1.jpg");
+	background-image: url("./images/textures/dust.jpg");
 	background-blend-mode: lighten;
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 	background-repeat: repeat;
 }
@@ -66,7 +66,7 @@ body {
 	width: 100%;
 	height: 60px;
 	background-color: var(--bg-dark-grey);
-	background-image: url("./images/textures/paper2.jpg");
+	background-image: url("./images/textures/paper.jpg");
 	background-blend-mode: multiply;
 	background-size: cover;
 	background-position: center;
@@ -130,7 +130,7 @@ body {
 	margin: auto;
 	min-height: 100vh;
 	background-color: var(--bg-grey);
-	background-image: url("./images/textures/dusty1.jpg");
+	background-image: url("./images/textures/dusty.jpg");
 	background-blend-mode: overlay;
 	background-size: cover;
 	background-position: center;
@@ -141,7 +141,7 @@ body {
 	width: 100%;
 	background-color: var(--bg-grey);
 	padding-top: 15px;
-	background-image: url("./images/textures/dusty1.jpg");
+	background-image: url("./images/textures/dusty.jpg");
 	background-blend-mode: overlay;
 	background-size: cover;
 	background-position: center;
@@ -189,7 +189,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	/* justify-content: center; */
-	background-image: url("./images/textures/dusty1.jpg");
+	background-image: url("./images/textures/dusty.jpg");
 	background-blend-mode: color-dodge;
 	background-size: cover;
 	background-position: center;
@@ -297,7 +297,7 @@ body {
 	text-align: center;
 	color: var(--heading-yellow);
 	background-color: var(--bg-grey);
-	background-image: url("./images/textures/dusty1.jpg");
+	background-image: url("./images/textures/dusty.jpg");
 	background-blend-mode: overlay;
 	background-size: cover;
 	background-position: center;
@@ -330,7 +330,7 @@ section {
 	justify-content: space-around;
 	padding: 0 0 40px 0;
 	background-color: var(--bg-grey);
-	background-image: url("./images/textures/dusty1.jpg");
+	background-image: url("./images/textures/dusty.jpg");
 	background-blend-mode: overlay;
 	background-size: cover;
 	background-position: center;
@@ -410,7 +410,6 @@ section button.view {
 
 .photo-gallery {
 	width: 100%;
-	/* background-color: white;	 */
 }
 
 .photo-gallery img {
@@ -453,7 +452,7 @@ footer {
   justify-content: center;
 	text-align: center;	
 	background-color: var(--bg-dark-grey);
-	background-image: url("./images/textures/paper2.jpg");
+	background-image: url("./images/textures/paper.jpg");
 	background-blend-mode: multiply;
 	background-size: cover;
 	background-position: center;
